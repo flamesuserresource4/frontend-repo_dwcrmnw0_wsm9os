@@ -1,6 +1,6 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline'
-import { ArrowDown, Mail, Github, Globe, Linkedin } from 'lucide-react'
+import { ArrowDown, Mail, Github, Globe, Linkedin, Phone } from 'lucide-react'
 
 const roles = [
   'Junior Web Developer',
@@ -39,6 +39,12 @@ function Section({ id, title, subtitle, children }) {
 }
 
 export default function App() {
+  // Provided contact details
+  const EMAIL = 'putrairwantofirdaus@gmail.com'
+  const PHONE_DISPLAY = '085895945095'
+  const PHONE_TEL = '+6285895945095' // Converted to international format
+  const LINKEDIN = 'https://www.linkedin.com/in/firdaus-putra-irwanto'
+
   return (
     <div className="min-h-screen bg-[#0b0f17] text-white relative overflow-hidden">
       {/* Subtle gradient + grid background */}
@@ -50,7 +56,7 @@ export default function App() {
       {/* Navbar */}
       <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/20 border-b border-white/10">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 h-16">
-          <a href="#" className="font-semibold tracking-wide text-white hover:text-white/90">Fauzan — Profile</a>
+          <a href="#" className="font-semibold tracking-wide text-white hover:text-white/90">Firdaus Putra Irwanto — Profile</a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
             <a href="#about" className="hover:text-white">About</a>
             <a href="#skills" className="hover:text-white">Skills</a>
@@ -92,9 +98,10 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-4 mt-8 text-white/70">
-              <a className="hover:text-white" href="mailto:contact@example.com" aria-label="Email"><Mail size={18} /></a>
+              <a className="hover:text-white" href={`mailto:${EMAIL}`} aria-label="Email"><Mail size={18} /></a>
+              <a className="hover:text-white" href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
+              <a className="hover:text-white" href={`tel:${PHONE_TEL}`} aria-label="Phone"><Phone size={18} /></a>
               <a className="hover:text-white" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
-              <a className="hover:text-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
               <a className="hover:text-white" href="https://your-portfolio.example" target="_blank" rel="noreferrer" aria-label="Website"><Globe size={18} /></a>
             </div>
           </div>
@@ -159,15 +166,20 @@ export default function App() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="font-semibold">Send a message</h3>
             <p className="text-white/70 text-sm mt-1">Email is the fastest way to reach me.</p>
-            <a href="mailto:contact@example.com" className="inline-flex mt-4 items-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm font-medium shadow-lg shadow-sky-500/20 hover:brightness-110">
-              <Mail size={16} /> Write an email
-            </a>
+            <div className="flex flex-wrap gap-3 mt-4">
+              <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm font-medium shadow-lg shadow-sky-500/20 hover:brightness-110">
+                <Mail size={16} /> Write an email
+              </a>
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium hover:bg-white/10">
+                <Phone size={16} /> Call {PHONE_DISPLAY}
+              </a>
+            </div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="font-semibold">Find me online</h3>
-            <div className="flex items-center gap-3 mt-4 text-white/80">
+            <div className="flex flex-wrap items-center gap-3 mt-4 text-white/80">
               <a className="hover:text-white inline-flex items-center gap-2" href="https://github.com/" target="_blank" rel="noreferrer"><Github size={16}/> GitHub</a>
-              <a className="hover:text-white inline-flex items-center gap-2" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><Linkedin size={16}/> LinkedIn</a>
+              <a className="hover:text-white inline-flex items-center gap-2" href={LINKEDIN} target="_blank" rel="noreferrer"><Linkedin size={16}/> LinkedIn</a>
               <a className="hover:text-white inline-flex items-center gap-2" href="https://your-portfolio.example" target="_blank" rel="noreferrer"><Globe size={16}/> Website</a>
             </div>
           </div>
