@@ -3,15 +3,15 @@ import Spline from '@splinetool/react-spline'
 import { ArrowDown, Mail, Github, Globe, Linkedin, Phone } from 'lucide-react'
 
 const roles = [
-  'Junior Web Developer',
-  'Junior Full-Stack Developer',
-  'AI‑Assisted Web Developer',
+  'Pengembang Web Junior',
+  'Pengembang Full‑Stack Junior',
+  'Pengembang Web berbantuan AI',
 ]
 
 const skills = [
   'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Vite',
   'Node.js', 'Express', 'MongoDB', 'REST API', 'Git', 'Tailwind CSS', 'Framer Motion',
-  'Python (basics)', 'AI tools', 'Prompt Engineering'
+  'Python (dasar)', 'AI tools', 'Prompt Engineering'
 ]
 
 function Badge({ children }) {
@@ -39,15 +39,15 @@ function Section({ id, title, subtitle, children }) {
 }
 
 export default function App() {
-  // Provided contact details
+  // Detail kontak
   const EMAIL = 'putrairwantofirdaus@gmail.com'
   const PHONE_DISPLAY = '085895945095'
-  const PHONE_TEL = '+6285895945095' // Converted to international format
+  const PHONE_TEL = '+6285895945095' // format internasional
   const LINKEDIN = 'https://www.linkedin.com/in/firdaus-putra-irwanto'
 
   return (
     <div className="min-h-screen bg-[#0b0f17] text-white relative overflow-hidden">
-      {/* Subtle gradient + grid background */}
+      {/* Latar gradien + grid halus */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 opacity-30" style={{background: 'radial-gradient(1000px 600px at 20% -10%, rgba(59,130,246,0.25), transparent), radial-gradient(900px 500px at 80% 10%, rgba(168,85,247,0.25), transparent)'}} />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:36px_36px]" />
@@ -56,29 +56,29 @@ export default function App() {
       {/* Navbar */}
       <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/20 border-b border-white/10">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 h-16">
-          <a href="#" className="font-semibold tracking-wide text-white hover:text-white/90">Firdaus Putra Irwanto — Profile</a>
+          <a href="#" className="font-semibold tracking-wide text-white hover:text-white/90">Firdaus Putra Irwanto — Profil</a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
-            <a href="#about" className="hover:text-white">About</a>
-            <a href="#skills" className="hover:text-white">Skills</a>
-            <a href="#education" className="hover:text-white">Education</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+            <a href="#about" className="hover:text-white">Tentang</a>
+            <a href="#skills" className="hover:text-white">Keahlian</a>
+            <a href="#education" className="hover:text-white">Pendidikan</a>
+            <a href="#contact" className="hover:text-white">Kontak</a>
           </nav>
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="relative pt-8 md:pt-12 lg:pt-16">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              Active Student · Informatics Engineering (D4)
+              Mahasiswa Aktif · Teknik Informatika (D4)
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Hi, I’m <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-blue-300 to-indigo-400">an Informatics Engineering student</span>
+              Halo, saya <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-blue-300 to-indigo-400">mahasiswa Teknik Informatika</span>
             </h1>
             <p className="text-white/70 mt-5 max-w-xl">
-              I’m studying at Jember State Polytechnic, passionate about building elegant, modern web experiences and sharpening my skills in software and engineering.
+              Saya menempuh studi di Politeknik Negeri Jember. Saya antusias membangun pengalaman web yang elegan dan modern, sekaligus mengasah kemampuan di bidang perangkat lunak dan rekayasa.
             </p>
 
             <div className="flex flex-wrap gap-2 mt-6">
@@ -89,59 +89,59 @@ export default function App() {
 
             <div className="flex items-center gap-3 mt-8">
               <a href="#skills" className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm font-medium shadow-lg shadow-sky-500/20 hover:brightness-110">
-                Explore Skills
+                Jelajahi Keahlian
                 <ArrowDown size={16} />
               </a>
               <a href="#contact" className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium hover:bg-white/10">
-                Contact Me
+                Hubungi Saya
               </a>
             </div>
 
             <div className="flex items-center gap-4 mt-8 text-white/70">
               <a className="hover:text-white" href={`mailto:${EMAIL}`} aria-label="Email"><Mail size={18} /></a>
               <a className="hover:text-white" href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
-              <a className="hover:text-white" href={`tel:${PHONE_TEL}`} aria-label="Phone"><Phone size={18} /></a>
+              <a className="hover:text-white" href={`tel:${PHONE_TEL}`} aria-label="Telepon"><Phone size={18} /></a>
               <a className="hover:text-white" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
-              <a className="hover:text-white" href="https://your-portfolio.example" target="_blank" rel="noreferrer" aria-label="Website"><Globe size={18} /></a>
+              <a className="hover:text-white" href="https://your-portfolio.example" target="_blank" rel="noreferrer" aria-label="Situs"><Globe size={18} /></a>
             </div>
           </div>
 
           <div className="relative min-h-[360px] md:min-h-[520px] lg:min-h-[640px]">
             <div className="absolute inset-0 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
               <Spline scene="https://prod.spline.design/qQUip0dJPqrrPryE/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-              {/* Soft glow overlays */}
+              {/* Glow halus */}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b0f17] via-transparent to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <Section id="about" title="About Me" subtitle="A quick snapshot of who I am and what drives me.">
+      {/* Tentang */}
+      <Section id="about" title="Tentang Saya" subtitle="Sekilas tentang siapa saya dan apa yang memotivasi saya.">
         <div className="grid md:grid-cols-3 gap-6">
           <div className="md:col-span-2 space-y-4 text-white/80 leading-relaxed">
             <p>
-              I am an active student at Jember State Polytechnic (Politeknik Negeri Jember) in the Informatics Engineering study program (D4). I love turning ideas into interactive web interfaces, optimizing user experience, and learning modern tools that blend software and engineering.
+              Saya adalah mahasiswa aktif di Politeknik Negeri Jember pada program studi Teknik Informatika (D4). Saya senang mengubah ide menjadi antarmuka web interaktif, mengutamakan pengalaman pengguna, dan mempelajari tools modern yang memadukan perangkat lunak dan rekayasa.
             </p>
             <p>
-              My focus right now is strengthening full‑stack fundamentals, building real projects, and exploring AI assistance to accelerate development while keeping high code quality.
+              Fokus saya saat ini adalah memperkuat fundamental full‑stack, membangun proyek nyata, dan mengeksplorasi bantuan AI untuk mempercepat pengembangan dengan tetap menjaga kualitas kode.
             </p>
           </div>
           <div className="space-y-3">
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-white/60 text-sm">Interests</p>
-              <p className="mt-1 text-sm">Software Development, Web Engineering, Product Design, AI‑assisted workflows</p>
+              <p className="text-white/60 text-sm">Minat</p>
+              <p className="mt-1 text-sm">Pengembangan Perangkat Lunak, Rekayasa Web, Desain Produk, Alur kerja berbantuan AI</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-white/60 text-sm">Goals</p>
-              <p className="mt-1 text-sm">Develop my interests, talents, and abilities in software and engineering through practical, impactful projects.</p>
+              <p className="text-white/60 text-sm">Tujuan</p>
+              <p className="mt-1 text-sm">Mengembangkan minat, bakat, dan kemampuan di bidang perangkat lunak dan rekayasa melalui proyek yang praktis dan berdampak.</p>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Skills */}
-      <Section id="skills" title="Skills" subtitle="Core tools and technologies I work with.">
+      {/* Keahlian */}
+      <Section id="skills" title="Keahlian" subtitle="Perangkat dan teknologi inti yang saya gunakan.">
         <div className="flex flex-wrap gap-2">
           {skills.map((s) => (
             <Badge key={s}>{s}</Badge>
@@ -149,45 +149,45 @@ export default function App() {
         </div>
       </Section>
 
-      {/* Education */}
-      <Section id="education" title="Education" subtitle="Where I’ve learned and grown.">
+      {/* Pendidikan */}
+      <Section id="education" title="Pendidikan" subtitle="Tempat saya belajar dan berkembang.">
         <div className="relative">
           <div className="absolute left-3 md:left-1.5 top-0 bottom-0 w-px bg-white/10" />
           <div className="space-y-6">
-            <EduItem school="Jember State Polytechnic" program="Informatics Engineering (D4)" period="— Active"/>
-            <EduItem school="Jenggawah State High School" program="— Science" period="— Graduate"/>
+            <EduItem school="Politeknik Negeri Jember" program="Teknik Informatika (D4)" period="— Aktif"/>
+            <EduItem school="SMA Negeri Jenggawah" program="— IPA" period="— Lulus"/>
           </div>
         </div>
       </Section>
 
-      {/* Contact */}
-      <Section id="contact" title="Let’s Connect" subtitle="Open to collaborations, internships, and exciting projects.">
+      {/* Kontak */}
+      <Section id="contact" title="Ayo Terhubung" subtitle="Terbuka untuk kolaborasi, magang, dan proyek menarik.">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <h3 className="font-semibold">Send a message</h3>
-            <p className="text-white/70 text-sm mt-1">Email is the fastest way to reach me.</p>
+            <h3 className="font-semibold">Kirim pesan</h3>
+            <p className="text-white/70 text-sm mt-1">Email adalah cara tercepat untuk menghubungi saya.</p>
             <div className="flex flex-wrap gap-3 mt-4">
               <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm font-medium shadow-lg shadow-sky-500/20 hover:brightness-110">
-                <Mail size={16} /> Write an email
+                <Mail size={16} /> Tulis email
               </a>
               <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium hover:bg-white/10">
-                <Phone size={16} /> Call {PHONE_DISPLAY}
+                <Phone size={16} /> Telepon {PHONE_DISPLAY}
               </a>
             </div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <h3 className="font-semibold">Find me online</h3>
+            <h3 className="font-semibold">Temukan saya online</h3>
             <div className="flex flex-wrap items-center gap-3 mt-4 text-white/80">
               <a className="hover:text-white inline-flex items-center gap-2" href="https://github.com/" target="_blank" rel="noreferrer"><Github size={16}/> GitHub</a>
               <a className="hover:text-white inline-flex items-center gap-2" href={LINKEDIN} target="_blank" rel="noreferrer"><Linkedin size={16}/> LinkedIn</a>
-              <a className="hover:text-white inline-flex items-center gap-2" href="https://your-portfolio.example" target="_blank" rel="noreferrer"><Globe size={16}/> Website</a>
+              <a className="hover:text-white inline-flex items-center gap-2" href="https://your-portfolio.example" target="_blank" rel="noreferrer"><Globe size={16}/> Situs</a>
             </div>
           </div>
         </div>
       </Section>
 
       <footer className="py-10 text-center text-white/50 text-sm">
-        © {new Date().getFullYear()} Personal Profile — Crafted with passion.
+        © {new Date().getFullYear()} Profil Pribadi — Dibuat dengan sepenuh hati.
       </footer>
     </div>
   )
